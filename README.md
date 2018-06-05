@@ -6,6 +6,17 @@ __Hierarchical Semantic Segmentation__ is a robust and customizable semantic seg
 
 __Panagiotis Meletis, Gijs Dubbelman (2018)__ _Training of convolutional networks on multiple heterogeneous datasets for street scene semantic segmentation._ The 29th IEEE Intelligent Vehicles Symposiom (IV 2018), [full paper on arXiv](https://arxiv.org/abs/1803.05675).
 
+If you find the code useful for your research, please consider citing our latest works:
+
+```
+@inproceedings{heterogeneous2018,
+  title={Training of Convolutional Networks on Multiple Heterogeneous Datasets for Street Scene Semantic Segmentation},
+  author={Panagiotis Meletis and Gijs Dubbelman},
+  booktitle={IEEE IV},
+  year={2018}
+}
+```
+
 # Introduction ###
 
 Hierarchical Semantic Segmentation is based on ResNet50. Its main novelty compared to other semantic segmentation systems, is that a single model can handle a variety of different datasets, with disjunct sets of semantic classes. Our system also runs in real time (18 fps). Figures 1-3 below provide sample results, from 3 different datasets.
