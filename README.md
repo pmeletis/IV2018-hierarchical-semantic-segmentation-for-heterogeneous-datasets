@@ -6,7 +6,7 @@ __Hierarchical Semantic Segmentation__ is a robust and customizable semantic seg
 
 __Panagiotis Meletis, Gijs Dubbelman (2018)__ _Training of convolutional networks on multiple heterogeneous datasets for street scene semantic segmentation._ The 29th IEEE Intelligent Vehicles Symposiom (IV 2018), [full paper on arXiv](https://arxiv.org/abs/1803.05675).
 
-If you find the code useful for your research, please consider citing our latest works:
+If you find our work useful for your research, please cite the following paper:
 
 ```
 @inproceedings{heterogeneous2018,
