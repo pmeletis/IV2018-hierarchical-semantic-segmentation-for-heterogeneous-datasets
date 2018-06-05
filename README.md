@@ -1,4 +1,4 @@
-# IV2018-hierarchical-semantic-segmentation-for-heterogeneous-datasets
+# Training of Convolutional Networks on Multiple Heterogeneous Datasets for Street Scene Semantic Segmentation
 Code for reproducing results for IV2018 paper "Training of Convolutional Networks on Multiple Heterogeneous Datasets for Street Scene Semantic Segmentation".
 
 
