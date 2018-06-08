@@ -1,0 +1,6 @@
+0. first take some time to check all the sign buttons!!
+1. signs that look alike (like sign show 30 (limit) having also a white border with "ZONE" on it should be labeled as 30)
+2. not all the sign area must be visible
+3. in case of multiple signs if a sign covers 2/3 of the proposed area label it as using that sign (ex.: if a sign is accompanied by a white label above of beyond but the sign covers 2/3 of the proposed area then label it with the sign's class)
+4. "other/multiple" and "not a sign" have the same label, so you can choose "other/multiple" for both
+5. sign with classId=24 "Road narrows" includes also subclasses: "Road narrows left", "Road narrows right", "Road narrows left, right"
