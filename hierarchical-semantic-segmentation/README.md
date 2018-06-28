@@ -12,6 +12,8 @@ tensorflow==1.6.0.
 
 # Inference
 
+Prerequisite: due to github space limitations download the checkpoints from [here](https://www.dropbox.com/s/ia8sh80ai9awyqw/trained_model_ckpts.zip?dl=0) and unzip them into checkpoints directory.
+
 To run inference on images on the combined label set of 108 classes from Cityscapes, Vistas and GTSDB datasets:
 ```python
 python predict.py log_dir predict_dir [optional arguments]
@@ -28,6 +30,11 @@ Optional arguments:
 * --restore_emas: restore exponential moving averages instead of normal variables from the checkpoint (better results)
 
 more arguments can be found at utils/utils.py in function add_predict_arguments.
+
+Example:
+```python
+python predict.py checkpoints/trained_model_ckpts/training02 samples --restore_emas --plotting --export_color_images --results_dir samples/results
+```
 
 # Coming soon...
 * exporting color images per dataset
