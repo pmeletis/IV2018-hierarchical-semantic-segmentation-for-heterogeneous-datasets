@@ -153,7 +153,8 @@ class SemanticSegmentationArguments(object):
                               help='Logging directory containing the trained model checkpoints and settings. The latest checkpoint will be loaded from this directory by default, unless ckpt_path is provided.')
     self._parser.add_argument('--ckpt_path', type=str, default=None,
                               help='If provided, this checkpoint (if exists) will be used.')
-    self._parser.add_argument('training_problem_def_path', type=str,
+    self._parser.add_argument('--training_problem_def_path', type=str,
+                              default='training_problem_def.json',
                               help='Problem definition json file. For required fields refer to help.')
     
     # inference arguments: prediction_dir, [results_dir], [inference_problem_def_path],

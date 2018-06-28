@@ -610,8 +610,9 @@ def predict_image_generator(params):
   for im_fname in fnames:
     im = Image.open(im_fname)
     # next line is time consuming (can take up to 400ms for im of 2 MPixels)
-    im_array = np.array(im)
-    yield im_array, im_fname.encode('utf-8'), im_array.shape[0], im_array.shape[1]
+    # im_array = np.array(im)
+    # yield im_array, im_fname.encode('utf-8'), im_array.shape[0], im_array.shape[1]
+    yield im, im_fname.encode('utf-8'), im.height, im.width
 
 def predict_prepare_and_preprocess(im, params):
   im.set_shape((None, None, 3))
@@ -629,8 +630,7 @@ def predict_input(config, params):
                                            output_types=(tf.uint8, tf.string, tf.int32, tf.int32))
   dataset = dataset.map(lambda im, im_path, height, width: (im_path, im, predict_prepare_and_preprocess(im, params)), num_parallel_calls=16)
   dataset = dataset.batch(params.Nb)
-  # dataset = dataset.prefetch(params.Nb*20)
-  dataset = dataset.shuffle(buffer_size=40)
+  dataset = dataset.prefetch(params.Nb*20)
   iterator = dataset.make_one_shot_iterator()
   values = iterator.get_next()
 

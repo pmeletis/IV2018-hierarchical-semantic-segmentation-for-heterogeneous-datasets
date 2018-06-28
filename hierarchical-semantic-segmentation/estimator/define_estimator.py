@@ -139,11 +139,11 @@ def define_estimator(mode, features, labels, model_fn, config, params):
   if mode in [tf.estimator.ModeKeys.EVAL, tf.estimator.ModeKeys.PREDICT]:
     # don't forget to change confusion matrix outputs
     # C: 28, M: 66, G: 44, E: 71
-    # flatten_decs = _flatten_all_decs(predictions['decisions'])
+    flatten_decs = _flatten_all_decs(predictions['decisions'])
     # flatten_decs = _flatten_for_cityscapes_val(predictions['decisions'])
     # flatten_decs = _flatten_for_mapillary_val(predictions['decisions'])
     # flatten_decs = _flatten_for_cityscapes_extended_val(predictions['decisions'])
-    flatten_decs = _flatten_for_gtsdb_val(predictions['decisions'])
+    # flatten_decs = _flatten_for_gtsdb_val(predictions['decisions'])
 
   if mode == tf.estimator.ModeKeys.EVAL:
     with tf.variable_scope('losses'):
